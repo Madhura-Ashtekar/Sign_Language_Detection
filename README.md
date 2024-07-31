@@ -1,56 +1,31 @@
 # Sign_Language_Detection
 
-Overview:
+This project implements a Convolutional Neural Network (CNN) to detect and classify sign language digits (0-9) from images.
+Features
 
-This project focuses on predicting customer churn for a telecom company using machine learning techniques. The goal is to identify customers who are likely to churn, enabling the company to take proactive measures to retain them.
+Uses Keras with TensorFlow backend
 
-Dataset: 
+Implements data augmentation for improved model generalization
+Achieves high accuracy on test set (97.45%)
+Includes example predictions on sample images
 
-The dataset used in this project contains 7,043 unique customer records, including various attributes such as customer demographics, account information, and service usage patterns.
+Dataset
 
-Project Workflow:
+The project uses the Sign Language Digits Dataset, which contains images of hand gestures representing digits 0-9 in sign language.
 
-Data Collection and Integration:
+Model Architecture
 
-Imported and merged customer, churn, and internet service datasets.
-Data Preparation:
+3 Convolutional layers with MaxPooling and Dropout
+Flatten layer
+2 Dense layers
+Output layer with 10 units (one for each digit)
 
-Conducted extensive data cleaning and handled missing values.
-Converted categorical variables to dummy variables.
-Exploratory Data Analysis (EDA):
+Results
 
-Performed EDA to understand the distribution and relationships of variables.
-Identified key factors influencing customer churn.
-Feature Engineering:
+The model achieves 97.45% accuracy on the test set and successfully classifies all example images.
 
-Created new features and dropped redundant variables to improve model performance.
-Addressed outliers in continuous variables to maintain data integrity.
-Model Building:
+Future Work
 
-Built and evaluated multiple machine learning models, including Logistic Regression and Decision Trees.
-Model Optimization:
-
-Used Recursive Feature Elimination (RFE) and Variance Inflation Factor (VIF) for feature selection and to reduce multicollinearity.
-
-Evaluation and Results:
-
-Achieved an accuracy of 80.4% and an AUC of 0.85 with the Logistic Regression model.
-Conducted ROC curve analysis to determine the optimal cutoff point for the churn prediction model.
-
-Key Findings:
-
-The churn rate was calculated at 27%, indicating an imbalanced dataset.
-Logistic Regression and Decision Trees were effective in predicting customer churn.
-Key factors influencing churn included contract type, tenure, and monthly charges.
-
-Conclusion:
-
-The project successfully demonstrated the application of machine learning techniques to predict customer churn in the telecom sector. The insights gained can help telecom companies develop strategies to reduce churn rates and enhance customer retention.
-
-Dependencies
-Python 3.7+
-Pandas
-NumPy
-Scikit-learn
-Matplotlib
-Seaborn
+Expand dataset to include more sign language symbols
+Implement real-time detection using webcam input
+Deploy model as a web application or mobile app
